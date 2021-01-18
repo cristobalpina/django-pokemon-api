@@ -4,8 +4,4 @@ from django.db import models
 class Pokemon(models.Model):
     name = models.CharField(max_length=45)
     pokemon_type = models.CharField(max_length=45)
-
-
-class Ability(models.Model):
-    name = models.CharField(max_length=45)
-    pokemon = models.ForeignKey(Pokemon, related_name='abilities',on_delete=models.CASCADE)
+    ability = models.CharField(max_length=45)
